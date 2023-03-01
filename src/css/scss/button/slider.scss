@@ -1,0 +1,55 @@
+@import "../variables";
+
+.button__slider {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+    transition: $button__slider--transition;
+    transform: scaleY(0);
+  }
+  &:hover:before {
+    transform: scaleY(1);
+  }
+  &--top-down {
+    &:before {
+      transform-origin: top center;
+    }
+  }
+  &--down-top {
+    &:before {
+      transform-origin: center bottom;
+    }
+  }
+  &--center {
+    justify-content: center;
+    span {
+      align-self: center;
+      transform: translate3d(0, -2rem, 0);
+      transition: $button__slider--transition;
+    }
+    &:after {
+      content: "";
+    }
+    &:hover {
+      color: white;
+      span {
+        transform: translateZ(0);
+        transition: $button__slider--transition;
+      }
+    }
+    &:before {
+      background: $secondary-color;
+      opacity: 1;
+    }
+  }
+  &:focus {
+    outline: 1px dotted #212121;
+    outline: 5px auto -webkit-focus-ring-color;
+  }
+}

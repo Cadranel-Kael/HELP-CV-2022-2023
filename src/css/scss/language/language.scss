@@ -1,0 +1,65 @@
+@import '../variables';
+
+.language {
+  background-color: $secondary-color;
+  color: $primary-color;
+  padding-bottom: 4.375rem;
+  strong {
+    font-weight: 600;
+  }
+  .shred {
+    background: $primary-color;
+    fill: $secondary-color;
+    width: 100vw;
+    svg {
+      display: block;
+      height: 101%;
+    }
+  }
+  &__title {
+    margin: 6.25rem auto 3.5rem;
+    font-size: 1.378125rem;
+    text-align: center;
+    color: $primary-color;
+    width: 14rem;
+    @media (min-width: 700px) {
+      font-size: 3.15rem;
+      width: 35rem;
+    }
+  }
+  &__desc {
+    padding: 0 $base-margin;
+    margin: 3.5rem auto;
+    font-size: 0.875rem;
+    max-width: 28.984375rem;
+  }
+  &__list {
+    font-size: 0.75rem;
+    padding: 0 $base-margin;
+    margin: 0.8203125rem auto;
+    position: relative;
+    max-width: 28.984375rem;
+  .list {
+    &__languages, &__programming {
+      li {
+        padding: 1em 0;
+        border-top: solid 1px $primary-color;
+        font-weight: 400;
+        &:last-of-type {
+          border-bottom: solid 1px $primary-color;
+        }
+      }
+    }
+    &__title {
+      font-weight: 500;
+      color: $primary-color;
+    }
+    &__languages {
+      position: absolute;
+      top: 0;
+      right: $base-margin;
+      text-align: right;
+    }
+  }
+  }
+}

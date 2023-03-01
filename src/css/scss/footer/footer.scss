@@ -1,0 +1,163 @@
+@import "../variables";
+
+.footer {
+  padding: 2.3125rem 0 3.375rem;
+  .marquee-text {
+    margin-bottom: 3.125rem;
+    color: $secondary-color;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 $base-margin;
+    text-transform: uppercase;
+  }
+  .form {
+    &__tagline {
+      color: $secondary-color;
+      margin-bottom: 1.125rem;
+    }
+    &__title {
+      font-size: 0.875rem;
+      color: white;
+      margin-bottom: 1.125rem;
+    }
+    p, label {
+      font-family: "Roboto", sans-serif;
+      font-size: 0.6875rem;
+      letter-spacing: 0.111em;
+    }
+    &__field {
+      margin-bottom: 1.125rem;
+      display: flex;
+      flex-direction: column;
+      &__label {
+        margin-bottom: 0.5rem;
+      }
+      &__error {
+        color: $error-color;
+        text-transform: none;
+      }
+      &__input, &__textarea {
+        font-family: "Roboto", sans-serif;
+        font-size: 0.875rem;
+        padding: 1em 0 1em 0.7857142857em;
+        color: $secondary-color;
+        background: transparent;
+        border: #f9ae65 solid 1px;
+        margin-bottom: 0.5rem;
+        &::placeholder {
+          color: $secondary-color;
+          opacity: 0.8;
+        }
+      }
+    }
+    &__button {
+      background: transparent;
+      color: $secondary-color;
+      border: $secondary-color 1px solid;
+      font-size: 0.875rem;
+      padding: 1.7857142857em 1.5714285714rem;
+      text-transform: uppercase;
+      text-align: left;
+      transition: $button__slider--transition;
+      margin-bottom: 4.375rem;
+      &:after {
+        content: "";
+      }
+      &:hover {
+        color: white;
+      }
+      &:before {
+        background: $secondary-color;
+        opacity: 1;
+      }
+    }
+  }
+  small {
+    display: block;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.3em;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 4.8125rem 4.8125rem 1rem 4.8125rem;
+    a {
+      color: white;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    + small {
+      margin: 0;
+    }
+  }
+  &__button {
+    box-sizing: border-box;
+    margin: 0 $base-margin;
+    color: $secondary-color;
+    display: flex;
+    width: auto;
+    background: transparent;
+    border: $secondary-color 1px solid;
+    font-size: 1.5rem;
+    padding: 1.3125em 0 1.3125em;
+    min-height: 8.9375rem;
+    text-transform: uppercase;
+  }
+}
+
+
+
+footer .socials {
+  display: flex;
+  justify-content: space-between;
+  margin: 90px;
+  visibility: hidden;
+}
+
+footer .socials li {
+  border: 2px #F9AE65 solid;
+  border-radius: 10em;
+  transition: 0.3s;
+}
+
+footer .socials li svg {
+  padding: 70px;
+  width: 97px;
+  height: 97px;
+  stroke: #F9AE65;
+  fill: none;
+  stroke-width: 9px;
+  transition: all 0.3s;
+}
+
+footer .socials li:hover {
+  border: #3C6D79 2px solid;
+  border-radius: 10em;
+  position: relative;
+}
+
+footer .socials li::before {
+  content: '';
+  position: absolute;
+  background-color: #F9AE65;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+  border-radius: 10em;
+  z-index: -1;
+}
+
+footer .socials li:hover::before {
+  width: 280px;
+  height: 280px;
+}
+
+footer .socials li:hover svg {
+  stroke: #3C6D79;
+}
+

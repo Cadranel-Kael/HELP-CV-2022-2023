@@ -1,0 +1,64 @@
+@import '../variables';
+
+.education {
+  a {
+    color: inherit;
+  }
+  background: $school-color;
+  color: $primary-color;
+  padding: 4.375rem $base-margin;
+  font-weight: 400;
+  @media (min-width: $desktop-size) {
+    display: grid;
+    grid-template-columns: 19% 10% 1fr;
+  }
+  &__title {
+    font-size: 2.034375rem;
+    font-weight: 500;
+    color: $primary-color;
+    width: 12rem;
+  }
+  .button--top-down:before {
+    background-color: #3c6d79;
+    opacity: 0.05;
+  }
+  &__list {
+    color: $primary-color;
+    display: block;
+    border: #3C6D79;
+    border-top: solid 1px;
+    z-index: 1;
+    .list__item {
+      border-bottom: solid 1px;
+      .item {
+        &__link {
+          display: block;
+          padding: 2.1875rem 0 2.125rem;
+        }
+        &__title {
+          font-size: 0.875rem;
+          color: $primary-color;
+          letter-spacing: 0.012em;
+          margin-bottom: 1.125rem;
+        }
+        &__school {
+          font-size: 1.421875rem;
+          letter-spacing: 0.02em;
+          margin-bottom: 1.4375rem;
+        }
+        &__extra {
+          font-size: 0.875rem;
+          letter-spacing: 0.024em;
+          margin-bottom: 2.6875rem;
+        }
+        &__location {
+          font-family: "Roboto", sans-serif;
+          font-size: 0.875rem;
+        }
+      }
+    }
+    img {
+      margin-bottom: 1.125rem;
+    }
+  }
+}

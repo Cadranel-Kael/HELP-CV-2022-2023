@@ -1,0 +1,35 @@
+// theme color
+//$primary-color: #3C6D79;
+$primary-color: #18565D;
+//$secondary-color: #F9AE65;
+$secondary-color: #F4B46C;
+$light-purple: #e0e2ee;
+$school-color: #E0E2ED;
+$error-color: #F4B46C;
+
+// text sizing
+$big-text: 2.515625rem;
+
+// button top-down & down-top animation .3s
+
+$button__slider--duration: .3s;
+$button__slider--function: cubic-bezier(.4,0,0,1);
+
+$button__slider--transition: transform $button__slider--duration $button__slider--function;
+
+// screen sizes
+
+$tablet-size: 700px;
+$desktop-size: 1000px;
+
+// spacing
+$base-margin: 0.9722311111rem;
+$desktop-margin: 2.1875rem;
+
+// Delaying animation
+
+@mixin set-delay($number-of-items, $delay) {
+  @for $i from 1 through $number-of-items {
+    &.item-#{$i} {transition-delay: #{$i*$delay}s;}
+  }
+}

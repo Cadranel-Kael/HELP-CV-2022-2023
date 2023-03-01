@@ -1,0 +1,52 @@
+@import '../variables';
+
+.intro {
+  &__nav {
+    padding: 1.75rem $base-margin;
+  .nav {
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      margin-right: 2.1875rem;
+      &__title {
+        color: $secondary-color;
+        font-weight: 800;
+        font-size: 1.1875rem;
+        width: min-content;
+        display: inline-block;
+      }
+    }
+  }
+  }
+   &__title{
+    margin: 3.25rem $base-margin 2.625rem;
+    font-size: 2.53125rem;
+     line-height: 1.1604938272;
+    font-weight: 500;
+    width: 40%;
+    @media (min-width: $tablet-size) {
+      margin-top: 3.875rem;
+      margin-bottom: 4.625rem;
+      font-size: 4.025rem;
+    }
+    @media (min-width: 1000px) {
+      font-size: 5.03125rem;
+      margin: 3.25rem $desktop-margin 2.625rem;
+    }
+  }
+  &__portait {
+    position: relative;
+    height: auto;
+    width: 70%;
+    background-color: $secondary-color;
+    @media (min-width: 700px) {
+      width: 50%;
+    }
+    @media (min-width: 1000px) {
+      width: 25%;
+    }
+  }
+}
+
+@import "__burger-menu/burger-menu";
+@import "__text-carousel/text-carousel";

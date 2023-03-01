@@ -1,0 +1,54 @@
+@import "variables";
+
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.opacity-zero {
+  opacity: 0;
+}
+@media (max-width: 1000px) {
+  .dt-only { /* Show in desktop only */
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    visibility: hidden;
+  }
+}
+body {
+  font-family: 'PP Neue Montreal', 'Neue Montreal', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
+  background: $primary-color;
+  color: white;
+  /*font-size: 1.1875em;*/
+}
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  color: $secondary-color;
+  font-weight: 500;
+}
+a {
+  text-decoration: none;
+}
+.sideways {
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+}
+
+@import "marquee-text/marquee-text";
+@import "intro/intro";
+@import "steps/steps";
+@import "language/language";
+@import "education/education";
+@import "button/slider";
+@import "footer/footer";
