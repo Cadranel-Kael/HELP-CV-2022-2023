@@ -11,6 +11,10 @@
     flex-direction: column;
     margin: 0 $base-margin;
     text-transform: uppercase;
+    @media (min-width: $desktop-size) {
+      max-width: 31.25rem;
+      margin: auto;
+    }
   }
   .form {
     &__tagline {
@@ -104,6 +108,10 @@
     padding: 1.3125em 0 1.3125em;
     min-height: 8.9375rem;
     text-transform: uppercase;
+    @media (min-width: $desktop-size) {
+      max-width: 31.25rem;
+      margin: auto;
+    }
   }
 }
 

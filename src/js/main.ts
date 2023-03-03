@@ -55,19 +55,19 @@ const formCheck = {
                 this.checker(false, this.nameInput, this.nameError, true, 3, false);
             })
         })
-        this.emailInput.addEventListener('focusout', (e) => {
+        this.emailInput.addEventListener('focusout', () => {
             this.checker(false, this.emailInput, this.emailError, true, 4, true);
             this.nameInput.addEventListener('input', () => {
                 this.checker(false, this.emailInput, this.emailError, true, 4, true);
             })
         })
-        this.messageInput.addEventListener('focusout', (e) => {
+        this.messageInput.addEventListener('focusout', () => {
             this.checker(false, this.messageInput, this.messageError, true, 10, false);
             this.nameInput.addEventListener('input', () => {
                 this.checker(false, this.messageInput, this.messageError, true, 10, false);
             })
         })
-        this.form.addEventListener('submit', (e) => {
+        this.form.addEventListener('submit', e => {
             e.preventDefault();
             this.checker(true, this.messageInput, this.messageError, true, 10, false);
             this.checker(true, this.emailInput, this.emailError, true, 5, true);
@@ -76,4 +76,40 @@ const formCheck = {
     }
 };
 
+const closeMenu = {
+    menuCheckbox: document.getElementById('burger-menu') as HTMLInputElement,
+    menuLinks: document.querySelectorAll('.burger-menu__nav__container__item'),
+    init() {
+        this.menuCheckbox.addEventListener('change', () => {
+            if (this.menuCheckbox.checked) {
+                this.menuCheckbox.ariaExpanded = "true";
+                window.addEventListener('keyup', e => {
+                    if (e.key === 'Esc' || e.key === 'Escape') {
+                        this.menuCheckbox.checked = false;
+                        this.menuCheckbox.ariaExpanded = "false";
+                    }
+                })
+            } else {
+                this.menuCheckbox.ariaExpanded = "false";
+                if (document.activeElement === this.menuCheckbox) {
+                    window.addEventListener('keyup', e => {
+                        if (e.key === 'Enter' || e.key === 'Space') {
+                            this.menuCheckbox.checked = true;
+                            this.menuCheckbox.ariaExpanded = "true";
+                        }
+                    })
+                }
+
+            }
+        })
+        for (const menuLink of this.menuLinks) {
+            menuLink.addEventListener('click', () => {
+                this.menuCheckbox.checked = false;
+                this.menuCheckbox.ariaExpanded = "false";
+            })
+        }
+    }
+}
+
+closeMenu.init();
 formCheck.init();

@@ -2,14 +2,16 @@
 
 .button__slider {
   position: relative;
+  cursor: pointer;
+  z-index: 1;
   &:before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: 100%;
     z-index: -1;
+    height: 100%;
     transition: $button__slider--transition;
     transform: scaleY(0);
   }

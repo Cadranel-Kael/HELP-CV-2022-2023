@@ -11,6 +11,7 @@
 </head>
 <body>
     <h1 class="sr-only">Kael Cadranel Web Designer CV</h1>
+    <a class="sr-only" tabindex="0" href="#start">Skip to page content</a>
     <section id="intro" class="intro">
         <h2 class="sr-only">introduction section</h2>
         <nav class="intro__nav nav">
@@ -23,7 +24,6 @@
                     <label for="burger-menu" class="sr-only">burger menu</label>
                     <input type="checkbox" name="menu" id="burger-menu" class="burger-menu__checkbox" aria-expanded="false">
                     <div class="burger-menu__icon">
-<!--                        TODO: JS for tab (space, enter, esc) and aria-expanded toggle -->
                         <div></div>
                     </div>
                     <nav class="burger-menu__nav">
@@ -31,27 +31,31 @@
                         <div class="burger-menu__nav__container">
                             <h3 class="burger-menu__nav__container__title"><a href="#">Kael Cadranel</a></h3>
                             <ul>
-                                <li><a href="#into" class="item-1">Introduction</a></li>
-                                <li><a href="#steps" class="item-2">Steps</a></li>
-                                <li><a href="#language" class="item-3">Skills</a></li>
-                                <li><a href="#education" class="item-4">Education</a></li>
-                                <li><a href="#contact-me" class="item-5">Contact-me</a></li>
+                                <li><a href="#into" class="burger-menu__nav__container__item item-1">Introduction</a></li>
+                                <li><a href="#steps" class="burger-menu__nav__container__item item-2">Steps</a></li>
+                                <li><a href="#language" class="burger-menu__nav__container__item item-3">Skills</a></li>
+                                <li><a href="#education" class="burger-menu__nav__container__item item-4">Education</a></li>
+                                <li><a href="#contact-me" class="burger-menu__nav__container__item item-5">Contact-me</a></li>
                             </ul>
                         </div>
                     </nav>
                 </li>
             </ul>
         </nav>
-        <h2 class="intro__title">Create your website</h2>
-        <img class="intro__portait" srcset="dist/images/kael-cadranel-intro-490x718.png 490w" sizes="(max-width: 600px) 490w" src="dist/images/kael-cadranel-intro.png" alt="Kael Cadranel" width="1426" height="2090">
+        <h2 class="intro__title" id="start">Create your website</h2>
+        <img class="intro__portait" srcset="images/kael-cadranel-intro-490x718.png 490w" sizes="(max-width: 600px) 490w" src="images/kael-cadranel-intro.png" alt="Kael Cadranel" width="1426" height="2090">
         <div class="intro__text-carousel text-carousel">
-            <img src="dist/images/trail-01.png" alt="" class="text-carousel__trail">
             <div class="text-carousel__title" aria-hidden="true"><span>0</span><span class="opacity-zero text-carousel__title__replace">0 </span><ol><li class="text-carousel__title__item-1">1</li><li class="text-carousel__title__item-2">2</li><li class="text-carousel__title__item-3">3</li></ol><span class="text-carousel__title__right">— 03</span></div>
             <ol class="text-carousel__text">
                 <li class="list item-1"><h2 class="sr-only">01 of 03</h2><p>Hi, my name is <span itemprop="name">Kael Cadranel</span>.</p></li>
                 <li class="list item-2"><h2 class="sr-only">02 of 03</h2><p>I'm a <span itemprop="jobTitle">web designer</span> based in <span itemprop="homeLocation">Belgium</span></p></li>
                 <li class="list item-3"><h2 class="sr-only">03 of 03</h2><p>I’ll design and create your website for you.</p></li>
             </ol>
+        </div>
+        <div class="intro__canvas-carousel">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
         </div>
     </section>
     <section id="steps" class="steps">
@@ -152,8 +156,8 @@
         </div>
         <ul class="education__list list">
             <li class="list__item item" itemprop="alumniOf" itemscope itemtype="https://schema.org/CollegeOrUniversity">
-                <a href="https://www.hepl.be" hreflang="fr" class="item__link button__slider--top-bottom">
-                    <img src="./dist/images/hepl-logo.png" alt="logo de HEPL" height="58px" width="154px" itemprop="logo">
+                <a href="https://www.hepl.be" hreflang="fr" class="item__link button__slider button__slider--top-down">
+                    <img src="images/hepl-logo.png" alt="logo de HEPL" height="58px" width="154px" itemprop="logo">
                     <meta itemprop="sameAs" content="https://www.hepl.be">
                     <h3 class="item__title"><time datetime="2022">2022</time> - <time datetime="2024">2024</time><span class="sr-only">: Bachelors in graphic design</span></h3>
                     <div class="item__school" aria-hidden="true">Bachelors in graphic design <meta itemprop="description" content="Bachelors in Graphic Design specialised in Web Design"></div>
@@ -162,27 +166,27 @@
                 </a>
             </li>
             <li class="list__item item" itemprop="alumniOf" itemscope itemtype="https://schema.org/CollegeOrUniversity">
-                <a href="https://www.hec.uliege.be/cms/c_7098604/en/hec" hreflang="en" class="item__link button__slider--top-bottom">
+                <a href="https://www.hec.uliege.be/cms/c_7098604/en/hec" hreflang="en" class="item__link button__slider--above button__slider button__slider--top-down">
                     <meta itemprop="sameAs" content="https://www.hec.uliege.be/cms/c_7098604/en/hec">
-                    <img src="./dist/images/hec-logo.png" alt="logo de HEC" height="87px" width="215px" itemprop="logo">
+                    <img src="images/hec-logo.png" alt="logo de HEC" height="87px" width="215px" itemprop="logo">
                     <h3 class="item__title"><time datetime="2019">2019</time> - <time datetime="2022">2022</time><span class="sr-only">: Business engineering student</span></h3>
                     <div class="item__school" itemprop="description" aria-hidden="true">Business engineering student</div>
                     <div class="item__location"><abbr lang="fr" title="Haute École de Commerce" itemprop="alternateName">HEC</abbr><meta itemprop="name" content="Haute École de Commerce"> — <span itemprop="location">Liège, Belgium</span></div>
                 </a>
             </li>
             <li class="list__item item" itemprop="alumniOf" itemscope itemtype="https://schema.org/School">
-                <a href="https://www.liege1.be" hreflang="fr" class="item__link button__slider--top-bottom">
+                <a href="https://www.liege1.be" hreflang="fr" class="item__link button__slider button__slider--top-down">
                     <meta itemprop="sameAs" content="https://www.liege1.be">
-                    <img src="./dist/images/athenee-logo.png" alt="logo de Liège 1" height="86px" width="77px" itemprop="logo">
+                    <img src="images/athenee-logo.png" alt="logo de Liège 1" height="86px" width="77px" itemprop="logo">
                     <h3 class="item__title"><time datetime="2018">2018</time> - <time datetime="2019">2019</time><span class="sr-only">: Extra year of mathematics and science</span></h3>
                     <div class="item__school" itemprop="description" aria-hidden="true">Extra year of mathematics and science</div>
                     <div class="item__location"><span lang="fr" itemprop="name">Athénée Charles Rogier</span><meta itemprop="alternateName" content="Liège 1"> — <span itemprop="location">Liège, Belgium</span></div>
                 </a>
             </li>
             <li class="list__item item" itemprop="alumniOf" itemscope itemtype="https://schema.org/School">
-                <a href="www.saintlouis-waremme.be" hreflang="fr" class="item__link  button__slider--top-bottom">
+                <a href="www.saintlouis-waremme.be" hreflang="fr" class="item__link button__slider  button__slider--top-down">
                     <meta itemprop="sameAs" content="www.saintlouis-waremme.be">
-                    <img src="./dist/images/saint-louis-logo.png" alt="logo de Collège Saint Louis" height="63px" width="64px" itemprop="logo">
+                    <img src="images/saint-louis-logo.png" alt="logo de Collège Saint Louis" height="63px" width="64px" itemprop="logo">
                     <h3 class="item__title"><time datetime="2018">2018</time><span class="sr-only">: High school degree</span></h3>
                     <div class="item__school" aria-hidden="true">High school degree</div>
                     <div class="item__extra"><abbr lang="fr" title="Certificat d'enseignement secondaire supérieur">CESS</abbr><meta itemprop="description" content="High school degree: Certificat d'enseignement secondaire supérieur(CESS)"></div>
@@ -209,7 +213,7 @@
             <h2 class="form__title">Contact-me</h2>
             <div class="form__field" id="name-field">
                 <label class="form__field__label" for="name">Full Name</label>
-                <input class="form__field__input" type="text" id="name" name="fullname" placeholder="John Doe" required tabindex="0">
+                <input class="form__field__input" type="text" id="name" name="fullname" placeholder="John Doe" minlength="4" required tabindex="0">
                 <span class="form__field__error"></span>
             </div>
             <div class="form__field" id="email-field">
@@ -219,7 +223,7 @@
             </div>
             <div class="form__field" id="message-field">
                 <label class="form__field__label" for="message">Message</label>
-                <textarea class="form__field__textarea" name="message" id="message" cols="20" rows="10" placeholder="Description of your need" required tabindex="0"></textarea>
+                <textarea class="form__field__textarea" minlength="10" name="message" id="message" cols="20" rows="10" placeholder="Description of your need" required tabindex="0"></textarea>
                 <span class="form__field__error"></span>
             </div>
             <button type="submit" class="form__button button__slider button__slider--down-top" tabindex="0">Contact-me</button>

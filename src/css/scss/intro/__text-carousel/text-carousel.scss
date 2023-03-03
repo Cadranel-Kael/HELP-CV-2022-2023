@@ -3,20 +3,16 @@
 .text-carousel {
   font-size: 0.875rem;
   text-transform: uppercase;
-  margin: 2.25em 4.375em 6.25em;
+  margin: 2.25em 0 6.25em;
   position: relative;
-  @media (min-width: 700px) {
+  display: inline-block;
+  @media (min-width: $tablet-size) {
     margin-top: 0;
     margin-left: 7.8125rem;
     padding-top: 6.2857142857em;
   }
-  &__trail {
-    position: absolute;
-    top: 0;
-    width: 9.84375rem;
-    @media (max-width: 700px) {
-      display: none;
-    }
+  @media (min-width: $desktop-size) {
+
   }
   &__text {
     overflow: hidden;
@@ -50,7 +46,6 @@
     ol {
       display: inline-block;
       overflow: hidden;
-
       li {
         position: absolute;
         top: 0;

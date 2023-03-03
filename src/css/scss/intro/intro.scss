@@ -1,8 +1,24 @@
 @import '../variables';
 
 .intro {
+  display: grid;
+  grid-template-areas:
+    "nav nav nav nav"
+    "title title title title"
+    "img img img img"
+    "text text text text"
+    "canvas canvas canvas canvas";
+  margin-bottom: 4.375rem;
+  position: relative;
+  @media (min-width: $desktop-size) {
+    grid-template-areas:
+    "nav nav nav nav"
+    "title title title title"
+    "img text . .";
+  }
   &__nav {
     padding: 1.75rem $base-margin;
+    grid-area: nav;
   .nav {
     &__list {
       display: flex;
@@ -19,6 +35,7 @@
   }
   }
    &__title{
+     grid-area: title;
     margin: 3.25rem $base-margin 2.625rem;
     font-size: 2.53125rem;
      line-height: 1.1604938272;
@@ -29,21 +46,36 @@
       margin-bottom: 4.625rem;
       font-size: 4.025rem;
     }
-    @media (min-width: 1000px) {
+    @media (min-width: $desktop-size) {
       font-size: 5.03125rem;
       margin: 3.25rem $desktop-margin 2.625rem;
     }
   }
   &__portait {
+    grid-area: img;
     position: relative;
     height: auto;
     width: 70%;
     background-color: $secondary-color;
     @media (min-width: 700px) {
-      width: 50%;
+      width: 50vw;
     }
     @media (min-width: 1000px) {
-      width: 25%;
+      width: 25vw;
+    }
+  }
+  &__text-carousel {
+    grid-area: text;
+  }
+  &__canvas-carousel {
+    grid-area: canvas;
+    background: $canvas-color;
+    width: 100vw;
+    @media (min-width: $tablet-size) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50vw;
     }
   }
 }
