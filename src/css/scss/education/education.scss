@@ -30,10 +30,28 @@
     z-index: 1;
     .list__item {
       border-bottom: solid 1px;
+      position: relative;
+      padding: 1.75rem 0 2.1875rem;
       .item {
         &__link {
           display: block;
-          padding: 2.1875rem 0 2.125rem;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 1;
+          text-indent: -1000%;
+          &:after {
+            content: url("../../images/arrow.svg");
+            display: block;
+            position: absolute;
+            background-size: cover;
+            width: 100%;
+            height: auto;
+            bottom: 2.5625rem;
+            right: 0;
+          }
         }
         &__title {
           font-size: 0.875rem;
@@ -55,10 +73,13 @@
           font-family: "Roboto", sans-serif;
           font-size: 0.875rem;
         }
+        &__logo {
+          margin-bottom: 1.125rem;
+          display: block;
+          height: 5.4375rem;
+          width: min-content;
+        }
       }
-    }
-    img {
-      margin-bottom: 1.125rem;
     }
   }
 }
