@@ -497,13 +497,13 @@ a {
   padding-bottom: 4.375rem; }
   .language strong {
     font-weight: 600; }
-  .language .shred {
+  .language__shred {
     background: #18565D;
+    width: 100%;
+    display: block;
     fill: #F4B46C;
-    width: 100vw; }
-    .language .shred svg {
-      display: block;
-      height: 101%; }
+    bottom: 0;
+    height: 9.75vw; }
   .language__title {
     margin: 6.25rem auto 3.5rem;
     font-size: 1.378125rem;
@@ -566,10 +566,27 @@ a {
     border-top: solid 1px;
     z-index: 1; }
     .education__list .list__item {
-      border-bottom: solid 1px; }
+      border-bottom: solid 1px;
+      position: relative;
+      padding: 1.75rem 0 2.1875rem; }
       .education__list .list__item .item__link {
         display: block;
-        padding: 2.1875rem 0 2.125rem; }
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        text-indent: -1000%; }
+        .education__list .list__item .item__link:after {
+          content: url("../../images/arrow.svg");
+          display: block;
+          position: absolute;
+          background-size: cover;
+          width: 100%;
+          height: auto;
+          bottom: 2.5625rem;
+          right: 0; }
       .education__list .list__item .item__title {
         font-size: 0.875rem;
         color: #18565D;
@@ -586,8 +603,11 @@ a {
       .education__list .list__item .item__location {
         font-family: "Roboto", sans-serif;
         font-size: 0.875rem; }
-    .education__list img {
-      margin-bottom: 1.125rem; }
+      .education__list .list__item .item__logo {
+        margin-bottom: 1.125rem;
+        display: block;
+        height: 5.4375rem;
+        width: min-content; }
 
 .button__slider {
   position: relative;
