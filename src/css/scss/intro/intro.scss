@@ -7,14 +7,14 @@
     "title title title title"
     "img img img img"
     "text text text text"
-    "canvas canvas canvas canvas";
+    "animation animation animation animation";
   margin-bottom: 4.375rem;
   position: relative;
   @media (min-width: $desktop-size) {
     grid-template-areas:
-    "nav nav nav nav"
-    "title title title title"
-    "img text . .";
+    "nav nav animation animation"
+    "title title animation animation"
+    "img text animation animation";
   }
   &__nav {
     padding: 1.75rem $base-margin;
@@ -30,6 +30,27 @@
         font-size: 1.1875rem;
         width: min-content;
         display: inline-block;
+      }
+      &__links {
+        z-index: 1;
+        text-transform: uppercase;
+        box-sizing: border-box;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        width: 50vw;
+        right: 0;
+        padding-right: 12.5rem;
+        padding-left: 12.5rem;
+        a {
+          color: $primary-color;
+          &:visited {
+            color: $primary-color;
+          }
+          &:hover {
+            text-decoration: underline;
+          }
+        }
       }
     }
   }
@@ -47,7 +68,7 @@
       font-size: 4.025rem;
     }
     @media (min-width: $desktop-size) {
-      font-size: 5.03125rem;
+      font-size: 6.5rem;
       margin: 3.25rem $desktop-margin 2.625rem;
     }
   }
@@ -67,18 +88,23 @@
   &__text-carousel {
     grid-area: text;
   }
-  &__canvas-carousel {
-    grid-area: canvas;
-    background: $canvas-color;
+  &__animation-carousel {
+    grid-area: animation;
     width: 100vw;
-    @media (min-width: $tablet-size) {
-      position: absolute;
-      top: 0;
-      right: 0;
+    height: 100vh;
+    padding-top: 7.5rem;
+    @media (min-width: $desktop-size) {
       width: 50vw;
     }
+    //@media (min-width: $tablet-size) {
+    //  position: absolute;
+    //  top: 0;
+    //  right: 0;
+    //  width: 50vw;
+    //}
   }
 }
 
 @import "__burger-menu/burger-menu";
 @import "__text-carousel/text-carousel";
+@import "__animation-carousel/animation-carousel";

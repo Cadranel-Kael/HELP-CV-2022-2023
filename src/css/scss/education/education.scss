@@ -74,10 +74,12 @@
           font-size: 0.875rem;
         }
         &__logo {
-          margin-bottom: 1.125rem;
+          //margin-bottom: 1.125rem;
           display: block;
           height: 5.4375rem;
-          width: min-content;
+          width: auto;
+          vertical-align: top;
+          //width: min-content;
         }
       }
     }

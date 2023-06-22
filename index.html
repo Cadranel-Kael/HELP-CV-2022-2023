@@ -17,9 +17,13 @@
         <nav class="intro__nav nav">
             <h2 class="sr-only">navigation menu</h2>
             <ul class="nav__list">
-                <li><h3><a href="#" class="nav__list__title" tabindex="0">Kael Cadranel</a></h3></li>
-                <li class="dt-only"><a href="#contact-me" tabindex="0">Contact me</a></li>
-                <li class="dt-only"><a href="#" tabindex="0">My portfolio</a></li>
+                <li><h3><a href="#" class="nav__list__title" tabindex="0" title="Back to main page">Kael Cadranel</a></h3></li>
+                <li>
+                    <ul class="nav__list__links">
+                        <li class="dt-only"><a href="#" tabindex="0">My portfolio</a></li>
+                        <li class="dt-only"><a href="#contact-me" tabindex="0">Contact me</a></li>
+                    </ul>
+                </li>
                 <li class="intro__nav__burger-menu burger-menu">
                     <label for="burger-menu" class="sr-only">burger menu</label>
                     <input type="checkbox" name="menu" id="burger-menu" class="burger-menu__checkbox" aria-expanded="false">
@@ -52,10 +56,26 @@
                 <li class="list item-3"><h2 class="sr-only">03 of 03</h2><p>I’ll design and create your website for you.</p></li>
             </ol>
         </div>
-        <div class="intro__canvas-carousel">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
+        <div class="intro__animation-carousel animation-carousel">
+            <div class="animation-carousel__item-1 item-1">
+                <svg width="940" height="744" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960.04 743.82">
+                    <g class="item-1__boat">
+                        <image class="item-1__boat__ball item-1__boat__ball--1" x="580.04" y="322" width="129" height="128" href="./images/animation__ball-orange.png"/>
+                        <image class="item-1__boat__ball item-1__boat__ball--2" x="444.04" y="322" width="129" height="128" href="./images/animation__ball-blue.png"/>
+                        <path class="item-1__boat__bottom" d="m416.04,403.5c.27,150.27,121.95,272,272,272s271.73-121.73,272-272H416.04Z"/>
+                        <path class="item-1__boat__flag" d="m797.54,82.5c-26-.8-62.17-12.33-77-18,19-9.33,61-29.3,77-34.5s61.33-22.17,82-30v102c-16.5-6.17-56-18.7-82-19.5Z"/>
+                    </g>
+                    <path class="item-1__wave" d="m0,743.82s1-58.11.02-163.04c39.96,0,60.25-9.89,79.89-19.46,19.69-9.59,40.06-19.5,80.11-19.5s60.42,9.91,80.11,19.5c19.64,9.57,39.93,19.46,79.87,19.46s60.25-9.89,79.89-19.46c19.69-9.59,40.06-19.5,80.11-19.5s60.42,9.91,80.13,19.5c19.64,9.57,39.93,19.46,79.89,19.46s60.25-9.89,79.89-19.46c19.69-9.59,40.07-19.5,80.13-19.5s60.42,9.91,80.13,19.5c19.64,9.57,39.96,19.46,79.89,19.46v163.04"/>
+                </svg>
+            </div>
+<!--            <div class="animation-carousel__item-2 item-2">-->
+<!--                <svg width="460" height="684" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 421.52 683.5">-->
+<!--                    <image class="item-2__ball item-2__ball&#45;&#45;1" x="152" y="248" width="129" height="129" href="./images/animation__ball-blue.png"/>-->
+<!--                    <image class="item-2__ball item-2__ball&#45;&#45;2" x="157" width="129" height="129" href="./images/animation__ball-orange.png"/>-->
+<!--                    <image class="item-2__ball item-2__ball&#45;&#45;3" x="121" y="124" width="129" height="129" href="./images/animation__ball-blue.png"/>-->
+<!--                    <path class="item-2__tri" d="m0,591.5c52.71,56.49,129.01,92,213.89,92s155.23-32.8,207.63-85.5l-207.63-221L0,591.5Z"/>-->
+<!--                </svg>-->
+<!--            </div>-->
         </div>
     </section>
     <section id="steps" class="steps">
@@ -102,13 +122,13 @@
         <h2 class="language__title">What I've learned throughout the years</h2>
         <div class="language__marquee-text marquee-text">
             <div class="marquee-text__inner" aria-hidden="true">
-                <span>Let's create</span>
-                <span>Let's create</span>
-                <span>Let's create</span>
-                <span>Let's create</span>
-                <span>Let's create</span>
-                <span>Let's create</span>
-                <span>Let's create</span>
+                <span>Always learning</span>
+                <span>Always learning</span>
+                <span>Always learning</span>
+                <span>Always learning</span>
+                <span>Always learning</span>
+                <span>Always learning</span>
+                <span>Always learning</span>
             </div>
         </div>
         <div class="language__desc">Throughout my life I’ve learned skills to help me become better at my job as a <strong>Web Developer</strong> and <strong>Web Designer</strong>. I am always eager to learn new things and better myself.</div>
@@ -156,7 +176,7 @@
         </div>
         <ul class="education__list list">
             <li class="list__item item" itemprop="alumniOf" itemscope itemtype="https://schema.org/CollegeOrUniversity">
-                <svg class="item__logo" role="img">
+                <svg class="item__logo" role="img" height="61" width="52">
                     <use xlink:href="./images/sprite.svg#logo-hepl"/>
                 </svg>
                 <meta itemprop="sameAs" content="https://www.hepl.be">
@@ -168,7 +188,9 @@
             </li>
             <li class="list__item item" itemprop="alumniOf" itemscope itemtype="https://schema.org/CollegeOrUniversity">
                 <meta itemprop="sameAs" content="https://www.hec.uliege.be/cms/c_7098604/en/hec">
-                <img src="images/hec-logo.png" alt="logo de HEC" height="87px" width="215px" itemprop="logo">
+                <svg class="item__logo" role="img" height="216.6149" width="187.5943">
+                    <use xlink:href="./images/sprite.svg#logo-hec"/>
+                </svg>
                 <h3 class="item__title"><time datetime="2019">2019</time> - <time datetime="2022">2022</time><span class="sr-only">: Business engineering student</span></h3>
                 <div class="item__school" itemprop="description" aria-hidden="true">Business engineering student</div>
                 <div class="item__location"><abbr lang="fr" title="Haute École de Commerce" itemprop="alternateName">HEC</abbr><meta itemprop="name" content="Haute École de Commerce"> — <span itemprop="location">Liège, Belgium</span></div>
@@ -176,7 +198,7 @@
             </li>
             <li class="list__item item" itemprop="alumniOf" itemscope itemtype="https://schema.org/School">
                 <meta itemprop="sameAs" content="https://www.liege1.be">
-                <svg class="item__logo" role="img">
+                <svg class="item__logo" role="img" width="113.1689" height="77.6247">
                     <use xlink:href="./images/sprite.svg#logo-liege1"/>
                 </svg>
                 <h3 class="item__title"><time datetime="2018">2018</time> - <time datetime="2019">2019</time><span class="sr-only">: Extra year of mathematics and science</span></h3>
@@ -185,7 +207,7 @@
                 <a href="https://www.liege1.be" hreflang="fr" class="item__link button__slider button__slider--top-down">Go to website</a>
             </li>
             <li class="list__item item" itemprop="alumniOf" itemscope itemtype="https://schema.org/School">
-                <svg class="item__logo" role="img">
+                <svg class="item__logo" role="img" width="87" height="85.663">
                     <use xlink:href="./images/sprite.svg#logo-saint-louis"/>
                 </svg>
                 <meta itemprop="sameAs" content="www.saintlouis-waremme.be">
@@ -200,13 +222,13 @@
     <footer class="footer">
         <div class="marquee-text">
             <div class="marquee-text__inner" aria-hidden="true">
-                <span>Let's start</span>
-                <span>Let's start</span>
-                <span>Let's start</span>
-                <span>Let's start</span>
-                <span>Let's start</span>
-                <span>Let's start</span>
-                <span>Let's start</span>
+                <span>Contact-me</span>
+                <span>Contact-me</span>
+                <span>Contact-me</span>
+                <span>Contact-me</span>
+                <span>Contact-me</span>
+                <span>Contact-me</span>
+                <span>Contact-me</span>
             </div>
         </div>
         <form class="footer__form form" action="#" method="post" id="contact-me">

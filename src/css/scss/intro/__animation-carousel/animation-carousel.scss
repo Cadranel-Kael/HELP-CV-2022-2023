@@ -1,0 +1,126 @@
+@import "../../variables";
+
+.intro__animation-carousel {
+  background: #eff1f6;
+  overflow: hidden;
+  //width: 50vw;
+  //position: absolute;
+  //top: 0;
+  //right: 0;
+  //z-index: -1;
+  .animation-carousel {
+    &__item-1 {
+      > svg {
+        width: 100vw;
+        @media (min-width: $desktop-size) {
+          width: 50vw;
+        }
+        height: auto;
+        translate: -20%;
+      }
+    .item-1 {
+      &__boat {
+        translate: -5%;
+        fill: white;
+        transform-origin: bottom;
+        animation: 3s ease-in-out infinite animation-1--rock;
+        &__ball {
+          transform-box: fill-box;
+          transform-origin: center center;
+          &--1 {
+            animation: 3s cubic-bezier(0.71, 0.01, 0.42, 0.99)  infinite animation-1--roll;
+          }
+          &--2 {
+            animation: 3s cubic-bezier(0.59, 0, 0.32, 1) infinite animation-1--roll;
+          }
+        }
+      }
+      &__wave {
+        fill: #eff1f6;
+        animation: 3s linear infinite animation-1--wave;
+      }
+    }
+    }
+    &__item-2 {
+      > svg {
+        display: block;
+        width: 50%;
+        height: auto;
+        margin: auto;
+      }
+
+      .item-2 {
+        &__ball {
+          transform-box: fill-box;
+          transform-origin: center center;
+          &--1 {
+            animation: 3s ease-in-out infinite animation-2--roll;
+          }
+          &--2 {
+            animation: 3s ease-in-out infinite animation-2--roll;
+          }
+          &--3 {
+            animation: 3s ease-in-out infinite animation-2--roll;
+          }
+        }
+        &__tri {
+          fill: white;
+          transform-origin: bottom;
+          animation: 2s ease-in-out infinite animation-1--rock;
+        }
+      }
+    }
+  }
+}
+
+@keyframes animation-1--wave {
+  0% {
+    translate: 0;
+  }
+  100% {
+    translate: 33%;
+  }
+}
+
+@keyframes animation-1--rock {
+  0% {
+    rotate: $rock-rotate;
+  }
+  50% {
+    rotate: -$rock-rotate;
+  }
+  100% {
+    rotate: $rock-rotate;
+  }
+}
+
+@keyframes animation-1--roll {
+  0% {
+    rotate: $roll-rotate;
+    translate: $roll-translate;
+  }
+  50% {
+    rotate: -$roll-rotate;
+    translate: 0;
+  }
+  100% {
+    rotate: $roll-rotate;
+    translate: $roll-translate;
+  }
+}
+
+@keyframes animation-2--roll {
+  0% {
+    rotate: $roll-rotate;
+    translate: 20px;
+  }
+  50% {
+    rotate: -$roll-rotate;
+    translate: 0;
+  }
+  100% {
+    rotate: $roll-rotate;
+    translate: 20px;
+  }
+}
+

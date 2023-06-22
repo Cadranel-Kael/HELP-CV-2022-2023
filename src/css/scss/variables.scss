@@ -27,6 +27,12 @@ $desktop-size: 1000px;
 $base-margin: 0.9722311111rem;
 $desktop-margin: 2.1875rem;
 
+// animation
+$rock-rotate: 5deg;
+
+$roll-rotate: 40deg;
+$roll-translate: 200px;
+
 // Delaying animation
 
 @mixin set-delay($number-of-items, $delay) {

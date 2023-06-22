@@ -83,12 +83,12 @@ a {
 
 .intro {
   display: grid;
-  grid-template-areas: "nav nav nav nav" "title title title title" "img img img img" "text text text text" "canvas canvas canvas canvas";
+  grid-template-areas: "nav nav nav nav" "title title title title" "img img img img" "text text text text" "animation animation animation animation";
   margin-bottom: 4.375rem;
   position: relative; }
   @media (min-width: 1000px) {
     .intro {
-      grid-template-areas: "nav nav nav nav" "title title title title" "img text . ."; } }
+      grid-template-areas: "nav nav animation animation" "title title animation animation" "img text animation animation"; } }
   .intro__nav {
     padding: 1.75rem 0.9722311111rem;
     grid-area: nav; }
@@ -104,6 +104,25 @@ a {
         font-size: 1.1875rem;
         width: min-content;
         display: inline-block; }
+      .intro__nav .nav__list__links {
+        z-index: 1;
+        text-transform: uppercase;
+        box-sizing: border-box;
+        position: absolute;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+        width: 50vw;
+        right: 0;
+        padding-right: 12.5rem;
+        padding-left: 12.5rem; }
+        .intro__nav .nav__list__links a {
+          color: #18565D; }
+          .intro__nav .nav__list__links a:visited {
+            color: #18565D; }
+          .intro__nav .nav__list__links a:hover {
+            text-decoration: underline; }
   .intro__title {
     grid-area: title;
     margin: 3.25rem 0.9722311111rem 2.625rem;
@@ -118,7 +137,7 @@ a {
         font-size: 4.025rem; } }
     @media (min-width: 1000px) {
       .intro__title {
-        font-size: 5.03125rem;
+        font-size: 6.5rem;
         margin: 3.25rem 2.1875rem 2.625rem; } }
   .intro__portait {
     grid-area: img;
@@ -134,15 +153,13 @@ a {
         width: 25vw; } }
   .intro__text-carousel {
     grid-area: text; }
-  .intro__canvas-carousel {
-    grid-area: canvas;
-    background: #DFE2EE;
-    width: 100vw; }
-    @media (min-width: 700px) {
-      .intro__canvas-carousel {
-        position: absolute;
-        top: 0;
-        right: 0;
+  .intro__animation-carousel {
+    grid-area: animation;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 7.5rem; }
+    @media (min-width: 1000px) {
+      .intro__animation-carousel {
         width: 50vw; } }
 
 .intro .burger-menu {
@@ -254,6 +271,7 @@ a {
       margin-bottom: 2.625em; }
     .intro .burger-menu__nav__container {
       display: block;
+      padding: 2.1875rem 0 1.09375rem;
       border-top: 1px solid #F4B46C;
       border-bottom: 1px solid #F4B46C;
       text-align: center;
@@ -284,6 +302,9 @@ a {
             transition-delay: 0.4s; }
           .intro .burger-menu__nav__container li a.item-5 {
             transition-delay: 0.5s; }
+          @media (min-width: 700px) {
+            .intro .burger-menu__nav__container li a {
+              font-size: 2.734375rem; } }
         .intro .burger-menu__nav__container li:hover {
           -ms-transform: skew(-16deg);
               transform: skew(-16deg); }
@@ -420,6 +441,90 @@ a {
     transform: translateY(0); }
   100% {
     transform: translateY(100%); } }
+
+.intro__animation-carousel {
+  background: #eff1f6;
+  overflow: hidden; }
+  .intro__animation-carousel .animation-carousel__item-1 > svg {
+    width: 100vw;
+    height: auto;
+    translate: -20%; }
+    @media (min-width: 1000px) {
+      .intro__animation-carousel .animation-carousel__item-1 > svg {
+        width: 50vw; } }
+  .intro__animation-carousel .animation-carousel__item-1 .item-1__boat {
+    translate: -5%;
+    fill: white;
+    -ms-transform-origin: bottom;
+        transform-origin: bottom;
+    animation: 3s ease-in-out infinite animation-1--rock; }
+    .intro__animation-carousel .animation-carousel__item-1 .item-1__boat__ball {
+      transform-box: fill-box;
+      -ms-transform-origin: center center;
+          transform-origin: center center; }
+      .intro__animation-carousel .animation-carousel__item-1 .item-1__boat__ball--1 {
+        animation: 3s cubic-bezier(0.71, 0.01, 0.42, 0.99) infinite animation-1--roll; }
+      .intro__animation-carousel .animation-carousel__item-1 .item-1__boat__ball--2 {
+        animation: 3s cubic-bezier(0.59, 0, 0.32, 1) infinite animation-1--roll; }
+  .intro__animation-carousel .animation-carousel__item-1 .item-1__wave {
+    fill: #eff1f6;
+    animation: 3s linear infinite animation-1--wave; }
+  .intro__animation-carousel .animation-carousel__item-2 > svg {
+    display: block;
+    width: 50%;
+    height: auto;
+    margin: auto; }
+  .intro__animation-carousel .animation-carousel__item-2 .item-2__ball {
+    transform-box: fill-box;
+    -ms-transform-origin: center center;
+        transform-origin: center center; }
+    .intro__animation-carousel .animation-carousel__item-2 .item-2__ball--1 {
+      animation: 3s ease-in-out infinite animation-2--roll; }
+    .intro__animation-carousel .animation-carousel__item-2 .item-2__ball--2 {
+      animation: 3s ease-in-out infinite animation-2--roll; }
+    .intro__animation-carousel .animation-carousel__item-2 .item-2__ball--3 {
+      animation: 3s ease-in-out infinite animation-2--roll; }
+  .intro__animation-carousel .animation-carousel__item-2 .item-2__tri {
+    fill: white;
+    -ms-transform-origin: bottom;
+        transform-origin: bottom;
+    animation: 2s ease-in-out infinite animation-1--rock; }
+
+@keyframes animation-1--wave {
+  0% {
+    translate: 0; }
+  100% {
+    translate: 33%; } }
+
+@keyframes animation-1--rock {
+  0% {
+    rotate: 5deg; }
+  50% {
+    rotate: -5deg; }
+  100% {
+    rotate: 5deg; } }
+
+@keyframes animation-1--roll {
+  0% {
+    rotate: 40deg;
+    translate: 200px; }
+  50% {
+    rotate: -40deg;
+    translate: 0; }
+  100% {
+    rotate: 40deg;
+    translate: 200px; } }
+
+@keyframes animation-2--roll {
+  0% {
+    rotate: 40deg;
+    translate: 20px; }
+  50% {
+    rotate: -40deg;
+    translate: 0; }
+  100% {
+    rotate: 40deg;
+    translate: 20px; } }
 
 .steps {
   display: grid;
@@ -604,10 +709,10 @@ a {
         font-family: "Roboto", sans-serif;
         font-size: 0.875rem; }
       .education__list .list__item .item__logo {
-        margin-bottom: 1.125rem;
         display: block;
         height: 5.4375rem;
-        width: min-content; }
+        width: auto;
+        vertical-align: top; }
 
 .button__slider {
   position: relative;
